@@ -9,20 +9,40 @@ import {MatMenuModule} from '@angular/material/menu';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavbarComponent } from './navbar/navbar.component';
-import { AccueilComponent } from './accueil/accueil.component';
-import { ContactComponent } from './contact/contact.component';
-import { CoursComponent } from './cours/cours.component';
-import { LoginComponent } from './login/login.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { CoursesComponent } from './components/courses/courses.component';
+import { HomeComponent } from './components/home/home.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
+import { LanguageComponent } from './components/language/language.component';
+import { AdmissionComponent } from './components/admission/admission.component';
+import { DiplomaComponent } from './components/diploma/diploma.component';
+import { EnrollmentComponent } from './components/enrollment/enrollment.component';
+import { PaymentComponent } from './components/payment/payment.component';
+import { DocStudentComponent } from './components/doc-student/doc-student.component';
+import { DocEmployeComponent } from './components/doc-employe/doc-employe.component';
+import { EmployeComponent } from './components/employe/employe.component';
+import { DepartmentComponent } from './components/department/department.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
-    AccueilComponent,
     ContactComponent,
-    CoursComponent,
-    LoginComponent
+    LoginComponent,
+    LandingPageComponent,
+    CoursesComponent,
+    HomeComponent,
+    RegisterComponent,
+    LanguageComponent,
+    AdmissionComponent,
+    DiplomaComponent,
+    EnrollmentComponent,
+    PaymentComponent,
+    DocStudentComponent,
+    DocEmployeComponent,
+    EmployeComponent,
+    DepartmentComponent
   ],
   imports: [
     BrowserModule,

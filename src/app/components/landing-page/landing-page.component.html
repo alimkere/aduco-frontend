@@ -1,0 +1,31 @@
+<mat-toolbar class="mat-elevation-z10" color="primary" fxLayout="row">
+    <div>
+        <a class="valign-center" mat-icon-button [routerLink]="['']">
+          <span style="margin-left:5px;"><mat-icon>school</mat-icon> ADUCO </span>
+        </a> 
+    </div>
+    <div fxFlex fxLayout="row" fxLayoutAlign="flex-end" fxHide.xs>
+        <ul fxLayout fxLayoutGap="20px" class="menu-items">
+            <li><a mat-button [routerLink]="['']">Home</a></li>
+            <li><a mat-button [routerLink]="['/courses']">Courses</a></li>
+            <li><a mat-button [routerLink]="['/admission']">Admission</a></li>
+            <li><a mat-button [routerLink]="['/contact']">Contact</a></li>
+            <li><a mat-flat-button color = "accent" [routerLink]="['/login']">Login</a></li>
+        </ul>
+    </div>
+    <div fxFlex fxLayout="row" fxLayoutAlign="flex-end" fxHide.gt-xs>
+        <a class="valign-center" mat-icon-button [matMenuTriggerFor]="menu" aria-label="additional links">
+            <mat-icon>more_vert</mat-icon>
+        </a>
+        <mat-menu #menu="matMenu">
+           <button mat-menu-item [routerLink]="['/home']">Accueil</button>
+            <button mat-menu-item [routerLink]="['/courses']">Courses</button>
+            <button mat-menu-item [routerLink]="['/admission']">Admission</button>
+            <button mat-menu-item [routerLink]="['/contact']">Contact</button>
+            <button mat-menu-item [routerLink]="['/login']">Login</button>
+        </mat-menu>
+    </div>
+  </mat-toolbar>
+  
+  
+  
