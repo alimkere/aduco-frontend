@@ -24,6 +24,7 @@ import { DocEmployeComponent } from './components/doc-employe/doc-employe.compon
 import { EmployeComponent } from './components/employe/employe.component';
 import { DepartmentComponent } from './components/department/department.component';
 import { CourseComponent } from './components/course/course.component';
+import { DepartmentService } from './services/department.service';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,7 @@ import { CourseComponent } from './components/course/course.component';
     FlexLayoutModule,
     MatMenuModule
   ],
-  providers: [],
+  providers: [DepartmentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
