@@ -10,7 +10,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
-import { CoursesComponent } from './components/courses/courses.component';
 import { HomeComponent } from './components/home/home.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { RegisterComponent } from './components/register/register.component';
@@ -24,6 +23,7 @@ import { DocStudentComponent } from './components/doc-student/doc-student.compon
 import { DocEmployeComponent } from './components/doc-employe/doc-employe.component';
 import { EmployeComponent } from './components/employe/employe.component';
 import { DepartmentComponent } from './components/department/department.component';
+import { CourseComponent } from './components/course/course.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +31,6 @@ import { DepartmentComponent } from './components/department/department.componen
     ContactComponent,
     LoginComponent,
     LandingPageComponent,
-    CoursesComponent,
     HomeComponent,
     RegisterComponent,
     LanguageComponent,
@@ -42,7 +41,8 @@ import { DepartmentComponent } from './components/department/department.componen
     DocStudentComponent,
     DocEmployeComponent,
     EmployeComponent,
-    DepartmentComponent
+    DepartmentComponent,
+    CourseComponent
   ],
   imports: [
     BrowserModule,

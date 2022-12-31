@@ -1,0 +1,25 @@
+.admission-container {
+    margin: 0 auto;
+    max-width: 800px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333333;
+  }
+  
+  .admission-container h1,
+  .admission-container h2 {
+    margin: 20px 0;
+    font-weight: bold;
+    color: #006699;
+  }
+  
+  .admission-container h2 {
+    font-size: 18px;
+    margin-top: 40px;
+  }
+  
+  .admission-container p {
+    margin: 20px 0;
+  }
+  
