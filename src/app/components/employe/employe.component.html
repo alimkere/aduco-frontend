@@ -1,1 +1,25 @@
-<p>employe works!</p>
+<table class="table">
+
+    <thead class="thead-dark">
+        <tr>
+            <th>Picture</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Poste</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let tempEmploye of employes">
+            <td class="align-middle"><img src="{{ tempEmploye.picture}}" height="50"></td>
+            <td class="align-middle">{{ tempEmploye.firstName}}</td>
+            <td class="align-middle">{{ tempEmploye.lastName}}</td>
+            <td class="align-middle">{{ tempEmploye.email}}</td>
+            <td class="align-middle">{{ tempEmploye.phone}}</td>
+            <td class="align-middle">{{ tempEmploye.poste}}</td>
+        </tr>
+
+    </tbody>
+</table>

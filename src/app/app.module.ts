@@ -25,6 +25,8 @@ import { EmployeComponent } from './components/employe/employe.component';
 import { DepartmentComponent } from './components/department/department.component';
 import { CourseComponent } from './components/course/course.component';
 import { DepartmentService } from './services/department.service';
+import { HttpClientModule } from '@angular/common/http';
+import { EmployeService } from './services/employe.service';
 
 @NgModule({
   declarations: [
@@ -53,9 +55,10 @@ import { DepartmentService } from './services/department.service';
     MatButtonModule,
     MatIconModule,
     FlexLayoutModule,
-    MatMenuModule
+    MatMenuModule,
+    HttpClientModule
   ],
-  providers: [DepartmentService],
+  providers: [DepartmentService, EmployeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
