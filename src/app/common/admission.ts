@@ -6,6 +6,6 @@ export class Admission {
     graduationPlace!: string
     appFeesProof!: string
     session!: string
-    createdAt!: Date;
-    updatedAt!: Date;
+    createdAt?: Date;
+    updatedAt?: Date;
 }

@@ -5,6 +5,6 @@ export class Employe {
     phone!: string;
     poste!: string;
     picture!: string;
-    createdAt!: Date;
-    updatedAt!: Date;
+    createdAt?: Date;
+    updatedAt?: Date;
 }

@@ -3,6 +3,6 @@ export class Payment {
     description!: string;
     amount!: number;
     transactionNumber!: string;
-    createdAt!: Date;
-    updatedAt!: Date;
+    createdAt?: Date;
+    updatedAt?: Date;
 }

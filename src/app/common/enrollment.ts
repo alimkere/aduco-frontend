@@ -1,5 +1,5 @@
 export class Enrollment {
     session!: string;
-    createdAt!: Date;
-    updatedAt!: Date;
+    createdAt?: Date;
+    updatedAt?: Date;
 }

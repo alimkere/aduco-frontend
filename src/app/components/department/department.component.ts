@@ -8,10 +8,10 @@ import { DepartmentService } from 'src/app/services/department.service';
   styleUrls: ['./department.component.css']
 })
 export class DepartmentComponent implements OnInit {
-
+  department: Department;
   departments: Department[] = [];
   
-  constructor(private departmentService: DepartmentService) { }
+  constructor(private departmentService: DepartmentService) { this.departments = []; this.department = new Department(); }
 
   ngOnInit() {
     this.listDepartments();

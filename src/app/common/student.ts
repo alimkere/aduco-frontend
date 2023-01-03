@@ -25,7 +25,6 @@ export class Student {
     admissions!: Admission[];
     enrollment!: Enrollment;
     docStudents!: DocStudent[];
-    var!: string;
-    createdAt!: Date;
-    updatedAt!: Date;
+    createdAt?: Date;
+    updatedAt?: Date;
 }
