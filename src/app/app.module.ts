@@ -27,7 +27,7 @@ import { CourseComponent } from './components/course/course.component';
 import { DepartmentService } from './services/department.service';
 import { HttpClientModule } from '@angular/common/http';
 import { EmployeService } from './services/employe.service';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -58,7 +58,8 @@ import { FormsModule } from '@angular/forms';
     FlexLayoutModule,
     MatMenuModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [DepartmentService, EmployeService],
   bootstrap: [AppComponent]
