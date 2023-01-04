@@ -27,6 +27,7 @@ import { CourseComponent } from './components/course/course.component';
 import { DepartmentService } from './services/department.service';
 import { HttpClientModule } from '@angular/common/http';
 import { EmployeService } from './services/employe.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { EmployeService } from './services/employe.service';
     MatIconModule,
     FlexLayoutModule,
     MatMenuModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [DepartmentService, EmployeService],
   bootstrap: [AppComponent]

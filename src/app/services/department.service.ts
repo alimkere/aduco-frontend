@@ -18,6 +18,26 @@ export class DepartmentService {
       map(response => response._embedded.departments)
     );
   }
+
+  createDepartment(department: Department): Observable<Department> {
+    return this.httpClient.post<Department>(this.baseUrl, department);
+  }
+
+  getDepartmentById(departmentId: number): Observable<Department> {
+    const departmentUrl = `${this.baseUrl}/${departmentId}`;
+    return this.httpClient.get<Department>(departmentUrl);
+  }
+
+  updateDepartment(departmentId: number, department: Department): Observable<Department> {
+    const departmentUrl = `${this.baseUrl}/${departmentId}`;
+    return this.httpClient.put<Department>(departmentUrl, department);
+  }
+
+  deleteDepartment(departmentId: number): Observable<any> {
+    const departmentUrl = `${this.baseUrl}/${departmentId}`;
+    return this.httpClient.delete<any>(departmentUrl);
+  }
+  
 }
 
 interface GetResponse {
