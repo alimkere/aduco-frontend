@@ -8,40 +8,29 @@ import { Department } from '../common/department';
   providedIn: 'root'
 })
 export class DepartmentService {
-
-  constructor(private httpClient: HttpClient) { }
-
   private baseUrl = 'http://localhost:8080/api/departments';
 
-  getDepartmentList(): Observable<Department[]> {
-    return this.httpClient.get<GetResponse>(this.baseUrl).pipe(
-      map(response => response._embedded.departments)
-    );
+  constructor(private http: HttpClient) { }
+
+  getDepartment(id: number): Observable<Object> {
+    return this.http.get(`${this.baseUrl}/${id}`);
   }
 
-  createDepartment(department: Department): Observable<Department> {
-    return this.httpClient.post<Department>(this.baseUrl, department);
+  createDepartment(department: Department): Observable<Object> {
+    return this.http.post(`${this.baseUrl}`, department);
   }
 
-  getDepartmentById(departmentId: number): Observable<Department> {
-    const departmentUrl = `${this.baseUrl}/${departmentId}`;
-    return this.httpClient.get<Department>(departmentUrl);
+  updateDepartment(id: number, value: any): Observable<Object> {
+    return this.http.put(`${this.baseUrl}/${id}`, value);
   }
 
-  updateDepartment(departmentId: number, department: Department): Observable<Department> {
-    const departmentUrl = `${this.baseUrl}/${departmentId}`;
-    return this.httpClient.put<Department>(departmentUrl, department);
+  deleteDepartment(id: number): Observable<any> {
+    return this.http.delete(`${this.baseUrl}/${id}`, { responseType: 'text' });
   }
 
-  deleteDepartment(departmentId: number): Observable<any> {
-    const departmentUrl = `${this.baseUrl}/${departmentId}`;
-    return this.httpClient.delete<any>(departmentUrl);
+  getDepartmentsList(): Observable<any> {
+    return this.http.get(`${this.baseUrl}`);
   }
-  
 }
 
-interface GetResponse {
-  _embedded: {
-    departments: Department[];
-  }
-}
+

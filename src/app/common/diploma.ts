@@ -1,3 +1,5 @@
+import { Student } from "./student";
+
 export class Diploma {
     serie!: string;
     beginDate!: Date;
@@ -7,6 +9,7 @@ export class Diploma {
     school!: string;
     country!: string;
     title!: string;
+    student?: Student;
     createdAt?: Date;
     updatedAt?: Date;
 }

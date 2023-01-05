@@ -1,25 +1,25 @@
-<table class="table">
-
-    <thead class="thead-dark">
-        <tr>
-            <th>Picture</th>
-            <th>FirstName</th>
-            <th>LastName</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Poste</th>
-        </tr>
-    </thead>
-
-    <tbody>
-        <tr *ngFor="let tempEmploye of employes">
-            <td class="align-middle"><img src="{{ tempEmploye.picture}}" height="50"></td>
-            <td class="align-middle">{{ tempEmploye.firstName}}</td>
-            <td class="align-middle">{{ tempEmploye.lastName}}</td>
-            <td class="align-middle">{{ tempEmploye.email}}</td>
-            <td class="align-middle">{{ tempEmploye.phone}}</td>
-            <td class="align-middle">{{ tempEmploye.poste}}</td>
-        </tr>
-
-    </tbody>
-</table>
+<div class="employes-container">
+    <h1>Employees</h1>
+    <div class="employe-form">
+      <form (submit)="createEmploye()">
+        <label>FirstName: <input type="text" [(ngModel)]="employe.firstName" name="name" required></label>
+        <label>LastName: <input type="text" [(ngModel)]="employe.lastName" name="name" required></label>
+        <label>Email: <input type="email" [(ngModel)]="employe.email" name="email" required></label>
+        <label>Phone: <input type="tel" [(ngModel)]="employe.phone" name="phone" required></label>
+        <label>Poste: <input type="text" [(ngModel)]="employe.poste" name="poste" required></label>
+        <label>Picture: <input type="text" [(ngModel)]="employe.picture" name="picture" required></label>
+        <label>Department ID: <input type="number" [(ngModel)]="departmentId" name="departmentId" required></label>
+        <button type="submit">Add Employee</button>
+      </form>
+    </div>
+    <div class="employes-list">
+      <ul>
+        <li *ngFor="let employe of employes">
+          {{employe.firstName}} | {{employe.lastName}} | {{employe.poste}} | {{employe.picture}} | {{employe.email}} | {{employe.phone}}
+          <button (click)="patchEmploye(employe.id)">Edit</button>
+          <button (click)="deleteEmploye(employe.id)">Delete</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  

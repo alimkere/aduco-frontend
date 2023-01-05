@@ -21,13 +21,14 @@ import { EnrollmentComponent } from './components/enrollment/enrollment.componen
 import { PaymentComponent } from './components/payment/payment.component';
 import { DocStudentComponent } from './components/doc-student/doc-student.component';
 import { DocEmployeComponent } from './components/doc-employe/doc-employe.component';
-import { EmployeComponent } from './components/employe/employe.component';
 import { DepartmentComponent } from './components/department/department.component';
 import { CourseComponent } from './components/course/course.component';
 import { DepartmentService } from './services/department.service';
 import { HttpClientModule } from '@angular/common/http';
 import { EmployeService } from './services/employe.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EmployesComponent } from './components/employe/employe.component';
+
 
 @NgModule({
   declarations: [
@@ -44,10 +45,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PaymentComponent,
     DocStudentComponent,
     DocEmployeComponent,
-    EmployeComponent,
     DepartmentComponent,
-    CourseComponent
+    CourseComponent,
+    EmployesComponent
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
