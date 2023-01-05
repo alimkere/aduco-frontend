@@ -27,7 +27,7 @@ import { DepartmentService } from './services/department.service';
 import { HttpClientModule } from '@angular/common/http';
 import { EmployeService } from './services/employe.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { EmployesComponent } from './components/employe/employe.component';
+import { EmployeComponent } from './components/employe/employe.component';
 
 
 @NgModule({
@@ -47,7 +47,7 @@ import { EmployesComponent } from './components/employe/employe.component';
     DocEmployeComponent,
     DepartmentComponent,
     CourseComponent,
-    EmployesComponent
+    EmployeComponent
   ],
   
   imports: [

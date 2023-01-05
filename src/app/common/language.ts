@@ -5,6 +5,4 @@ export class Language {
     type!: string;
     level!: string;
     student?: Student;
-    createdAt?: Date;
-    updatedAt?: Date;
 }

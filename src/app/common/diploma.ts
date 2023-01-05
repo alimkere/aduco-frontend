@@ -10,6 +10,4 @@ export class Diploma {
     country!: string;
     title!: string;
     student?: Student;
-    createdAt?: Date;
-    updatedAt?: Date;
 }

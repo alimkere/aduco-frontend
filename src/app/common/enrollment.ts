@@ -5,6 +5,4 @@ export class Enrollment {
     session!: string;
     student?: Student;
     payment?: Payment;
-    createdAt?: Date;
-    updatedAt?: Date;
 }

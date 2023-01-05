@@ -9,9 +9,7 @@ export class Employe {
     phone!: string;
     poste!: string;
     picture!: string;
-    department: Department | null = null;
+    department?: Department;
     docEmploye?: DocEmploye[];
-    createdAt?: Date;
-    updatedAt?: Date;
 }
 

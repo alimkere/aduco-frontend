@@ -9,6 +9,4 @@ export class Admission {
     appFeesProof!: string;
     session!: string;
     student?: Student;
-    createdAt?: Date;
-    updatedAt?: Date;
 }

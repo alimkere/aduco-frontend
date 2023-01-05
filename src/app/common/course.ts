@@ -3,6 +3,4 @@ export class Course {
     image!: string;
     description!: string;
     link!: string;
-    createdAt?: Date;
-    updatedAt?: Date;
 }

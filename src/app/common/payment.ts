@@ -6,6 +6,4 @@ export class Payment {
     amount!: number;
     transactionNumber!: string;
     enrollment?: Enrollment;
-    createdAt?: Date;
-    updatedAt?: Date;
 }
